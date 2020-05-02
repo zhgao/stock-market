@@ -8,5 +8,5 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Stock-Market Application';
+  title = 'Stock Market Application';
 }
