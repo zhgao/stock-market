@@ -100,4 +100,8 @@
 		</plugins>
 	</build>
 
-	</project>
+	<modules>
+		<module>excel-service</module>
+		<module>cloud-user-service</module>
+</modules>
+</project>
