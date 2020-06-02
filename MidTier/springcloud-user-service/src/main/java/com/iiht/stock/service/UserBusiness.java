@@ -37,7 +37,7 @@ public class UserBusiness implements UserService{
 	
 	public List<UserEntity> findAllUsers(){
 		CommonResult<CompanyEntity> result = restTemplate.getForObject("http://cloud-company-service/api/company/1", CommonResult.class);
-		System.out.println("com.iiht.stock.entity name: " + result.getResultBody().getName());
+//		System.out.println("com.iiht.stock.entity name: " + result.getResultBody().getName());
 		
 		return userRepository.findAll();
 	}

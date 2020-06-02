@@ -12,6 +12,7 @@
     <module>springcloud-auth2-service</module>
     <module>common</module>
       <module>springcould-eureka-service</module>
+      <module>springcloud-ipo-service</module>
   </modules>
   <packaging>pom</packaging>
 

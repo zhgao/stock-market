@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcould-eureka-service" />
-        <module name="common" />
         <module name="springcloud-user-service" />
         <module name="springcloud-zuul-service" />
+        <module name="common" />
+        <module name="springcloud-ipo-service" />
         <module name="springcloud-auth2-service" />
+        <module name="springcould-eureka-service" />
       </profile>
     </annotationProcessing>
   </component>
