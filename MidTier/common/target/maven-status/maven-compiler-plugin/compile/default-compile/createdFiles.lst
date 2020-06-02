@@ -1,0 +1,12 @@
+com\iiht\stock\entity\UserModel.class
+com\iiht\stock\exception\StockBusinessException.class
+com\iiht\stock\exception\StockRequestException.class
+com\iiht\stock\result\CommonResult.class
+com\iiht\stock\exception\ErrorResource.class
+com\iiht\stock\exception\StockEXConstants.class
+com\iiht\stock\result\GlobalReturnConfig$StockExceptionHandler.class
+com\iiht\stock\exception\FieldErrorResource.class
+com\iiht\stock\result\GlobalReturnConfig$CommonResultResponseAdvice.class
+com\iiht\stock\entity\CompanyEntity.class
+com\iiht\stock\entity\UserEntity.class
+com\iiht\stock\result\GlobalReturnConfig.class
