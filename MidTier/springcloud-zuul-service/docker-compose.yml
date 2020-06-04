@@ -1,0 +1,14 @@
+version: '3'
+services:
+  user-service:
+    image: springcloud-zuul-service
+    container_name: springcloud-zuul-service
+    ports:
+      - "8085:8085"
+    restart: always
+    networks:
+      - network-smc
+
+networks:
+  network-smc:
+    external: true

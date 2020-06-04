@@ -2,6 +2,7 @@ C:\workspace\zhgao\common\src\main\java\com\iiht\stock\result\GlobalReturnConfig
 C:\workspace\zhgao\common\src\main\java\com\iiht\stock\entity\UserEntity.java
 C:\workspace\zhgao\common\src\main\java\com\iiht\stock\exception\StockRequestException.java
 C:\workspace\zhgao\common\src\main\java\com\iiht\stock\result\CommonResult.java
+C:\workspace\zhgao\common\src\main\java\com\iiht\stock\entity\IpoEntity.java
 C:\workspace\zhgao\common\src\main\java\com\iiht\stock\exception\ErrorResource.java
 C:\workspace\zhgao\common\src\main\java\com\iiht\stock\exception\FieldErrorResource.java
 C:\workspace\zhgao\common\src\main\java\com\iiht\stock\exception\StockBusinessException.java

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  user-service:
+    image: springcloud-ipo-service
+    container_name: ipo-service
+    ports:
+      - "8082:8082"
+    restart: always
+    networks:
+      - network-smc
+
+networks:
+  network-smc:
+    external: true

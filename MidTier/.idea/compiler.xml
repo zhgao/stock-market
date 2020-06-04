@@ -12,6 +12,7 @@
         <module name="springcloud-ipo-service" />
         <module name="springcloud-auth2-service" />
         <module name="springcould-eureka-service" />
+        <module name="test" />
       </profile>
     </annotationProcessing>
   </component>

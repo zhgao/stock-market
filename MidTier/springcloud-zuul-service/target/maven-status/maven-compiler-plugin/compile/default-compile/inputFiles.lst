@@ -1,0 +1,8 @@
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\conf\CorsConfig.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\conf\SecurityConfig.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\util\UserContextInterceptor.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\util\UserContext.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\util\UserContextFilter.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\ZuulServerApplication.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\filter\AccessFilter.java
+C:\workspace\zhgao\springcloud-zuul-service\src\main\java\com\iiht\stock\util\UserContextHolder.java

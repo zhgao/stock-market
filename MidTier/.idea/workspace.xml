@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="yml" />
       </list>
     </option>
   </component>
@@ -33,26 +34,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/springcloud-user-service/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springcloud-ipo-service/src/main/java/com/iiht/stock" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springcould-eureka-service" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\zhgao" />
-      <recent name="C:\workspace\zhgao\MidTier" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.iiht.stock" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\workspace\zhgao\springcloud-ipo-service\src\main\java\com\iiht\stock" />
-      <recent name="C:\workspace\zhgao\springcloud-ipo-service\src\main\resources" />
-      <recent name="C:\workspace\zhgao\springcloud-zuul-service\src\main\resources" />
-      <recent name="C:\workspace\zhgao\springcould-eureka-service\src\main\resources" />
-      <recent name="C:\workspace\zhgao\springcould-eureka-service\src\main\java\com\iiht\stock" />
+      <recent name="C:\workspace\zhgao\springcould-eureka-service" />
+      <recent name="C:\workspace\zhgao\springcloud-zuul-service" />
+      <recent name="C:\workspace\zhgao\springcloud-auth2-service" />
+      <recent name="C:\workspace\zhgao\common" />
+      <recent name="C:\workspace\zhgao\springcloud-ipo-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\zhgao" />
+      <recent name="C:\workspace\zhgao\MidTier" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EurekaServerApplication">
+  <component name="RunManager" selected="Application.LamdaScope">
     <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.iiht.stock.EurekaServerApplication" />
       <module name="springcould-eureka-service" />
@@ -79,22 +80,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OAuthApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.iiht.stock.OAuthApplication" />
-      <module name="springcloud-auth2-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iiht.stock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="common" />
+    <configuration name="LamdaScope" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LamdaScope" />
+      <module name="test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,13 +100,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LamdaScope" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.EurekaServerApplication" />
         <item itemvalue="Application.ZuulServerApplication" />
         <item itemvalue="Application.IpoApplication" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.OAuthApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -144,10 +139,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="75" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1590570215696" />
-    <state x="261" y="0" key="#Plugins" timestamp="1590504616100">
+    <state x="261" y="0" key="#Plugins" timestamp="1591276925657">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="0" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1590504616100" />
+    <state x="261" y="0" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1591276925657" />
     <state x="219" y="58" width="1220" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590571785970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -156,6 +151,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="18" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591106720210" />
+    <state x="446" y="132" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591272893745">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="446" y="132" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1591272893745" />
     <state x="402" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590542450766">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -184,42 +183,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="61" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590506024969" />
-    <state width="1481" height="196" key="GridCell.Tab.0.bottom" timestamp="1591108201900">
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom" timestamp="1591280654722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591108201900" />
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591280654722" />
     <state width="1481" height="196" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1590283961285" />
-    <state width="1481" height="196" key="GridCell.Tab.0.center" timestamp="1591108201899">
+    <state width="1481" height="195" key="GridCell.Tab.0.center" timestamp="1591280654722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591108201899" />
+    <state width="1481" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591280654722" />
     <state width="1481" height="196" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1590283961284" />
-    <state width="1481" height="196" key="GridCell.Tab.0.left" timestamp="1591108201899">
+    <state width="1481" height="195" key="GridCell.Tab.0.left" timestamp="1591280654721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591108201899" />
+    <state width="1481" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591280654721" />
     <state width="1481" height="196" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1590283961283" />
-    <state width="1481" height="196" key="GridCell.Tab.0.right" timestamp="1591108201899">
+    <state width="1481" height="195" key="GridCell.Tab.0.right" timestamp="1591280654722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591108201899" />
+    <state width="1481" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591280654722" />
     <state width="1481" height="196" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1590283961284" />
     <state x="183" y="0" key="Maven.ArtifactSearchDialog" timestamp="1591105059919">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="183" y="0" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1591105059919" />
-    <state x="160" y="0" key="SettingsEditor" timestamp="1591107976254">
+    <state x="160" y="0" key="SettingsEditor" timestamp="1591178962599">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="160" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591107976254" />
+    <state x="160" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591178962599" />
     <state x="560" y="175" key="chooseDestDirectoryDialog" timestamp="1590507418281">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="560" y="175" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590507418281" />
-    <state x="36" y="0" key="new project wizard" timestamp="1591103042157">
+    <state x="36" y="0" key="new project wizard" timestamp="1591178357690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="36" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1591103042157" />
+    <state x="36" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1591178357690" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stockmarket$UserApplication.ic" NAME="UserApplication Coverage Results" MODIFIED="1590543101979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
