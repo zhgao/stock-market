@@ -1,0 +1,104 @@
+{
+    "registration": {
+        "code":0,
+        "message":"successful"
+    },
+    "login": {
+        "code":0,
+        "message":"successful",
+        "data":{
+            "Authorization": {
+                "id":1,
+                "sub":"shawn",
+                "roles":["USER"],
+                "exp":"5"
+            }
+        }
+    },
+    "ipos": {
+        "code":0,
+        "message":"successful",
+        "data":{
+            "total": 2,
+            "list": [
+                {
+                    "companyName": "Company A",
+                    "companyCode": "111111",
+                    "stockExchangeName": "Exchange A",
+                    "pricePerShare": "1.50",
+                    "totalShare": 100000,
+                    "openDatetime": "2020-06-01"
+                },
+                {
+                    "companyName": "Company B",
+                    "companyCode": "222222",
+                    "stockExchangeName": "Exchange B",
+                    "pricePerShare": "0.50",
+                    "totalShare": 200000,
+                    "openDatetime": "2020-06-05"
+                }
+            ]
+        }
+    },
+    "stock-price": {
+        "code":0,
+        "message":"successful",
+        "data":{
+            "total": 2,
+            "list": [
+                {
+                    "companyCode": "111111",
+                    "stockExchange": "Exchange A",
+                    "currentPrice": "1.50",
+                    "stockTimestamp": "2020-06-01 10:00:00"
+                },
+                {
+                    "companyCode": "222222",
+                    "stockExchange": "Exchange B",
+                    "currentPrice": "0.50",
+                    "stockTimestamp": "2020-06-05 10:00:00"
+                }
+            ]
+        }
+    },
+    "stock-price-charts": {
+        "code":0,
+        "message":"successful",
+        "data":[
+            {
+            "companyName": "Company A",
+            "list": [
+                {
+                    "currentPrice": "1.50",
+                    "stockTimestamp": "2020-06-01 10:00:00"
+                },
+                {
+                    "currentPrice": "2.50",
+                    "stockTimestamp": "2020-06-05 10:20:00"
+                },
+                {
+                    "currentPrice": "0.50",
+                    "stockTimestamp": "2020-06-05 10:30:00"
+                }
+            ]
+            },
+            {
+                "companyName": "Company B",
+                "list": [
+                    {
+                        "currentPrice": "2.50",
+                        "stockTimestamp": "2020-06-01 10:00:00"
+                    },
+                    {
+                        "currentPrice": "3.50",
+                        "stockTimestamp": "2020-06-05 10:20:00"
+                    },
+                    {
+                        "currentPrice": "3.20",
+                        "stockTimestamp": "2020-06-05 10:30:00"
+                    }
+                ]
+                }
+        ]
+    }
+}

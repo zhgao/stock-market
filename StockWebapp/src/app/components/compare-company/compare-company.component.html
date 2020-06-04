@@ -1,0 +1,76 @@
+<div class="row mt-4">
+    <div class="col-6">
+        <small class="form-text text-muted mb-2">Add more companies by clicking the plus button</small>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Company</label>
+            <div class="col-sm-8">
+                <ng-template #rt let-r="result" let-t="term">
+                    <ngb-highlight [result]="r.companyName" [term]="t"></ngb-highlight>
+                    <div>{{r.stockExchangeName}} : {{r.companyCode}}</div>
+                </ng-template>
+                <div class="input-group">
+                    <input name="company" type="text" class="form-control" [(ngModel)]="company" [ngbTypeahead]="search"
+                        [resultTemplate]="rt" [inputFormatter]="formatter" />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" (click)="addCompany()"><i
+                                class="fa fa-plus fa-fw"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="fromDate" class="col-sm-4 col-form-label">From</label>
+            <div class="col-sm-8">
+                <div class="input-group">
+                    <input id="fromDate" type="text" ngbDatepicker #d1="ngbDatepicker" class="form-control"
+                        placeholder="yyyy-mm-dd" [(ngModel)]="fromDate">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" (click)="d1.toggle()" type="button"><i
+                                class="fa fa-calendar fa-fw"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="toDate" class="col-sm-4 col-form-label">To</label>
+            <div class="col-sm-8">
+                <div class="input-group">
+                    <input id="toDate" type="text" ngbDatepicker #d2="ngbDatepicker" class="form-control"
+                        placeholder="yyyy-mm-dd" [(ngModel)]="toDate">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button"><i
+                                class="fa fa-calendar fa-fw"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <span>Companies being compared</span>
+        <ul>
+            <li *ngFor="let c of selectedCompanies">
+                {{c.companyName}} | {{c.stockExchangeName}} : {{c.companyCode}} <i type="button"
+                    (click)="removeCompany(c.companyCode)" class="fa fa-remove fa-fw"></i>
+            </li>
+        </ul>
+        <hr>
+        <button (click)="generateCharts()" class="btn btn-primary">Generate Chart</button>
+        <div class="alert alert-warning mt-3" *ngIf="messages.length > 0">
+            Below companies have no data during this period:
+            <ul>
+                <li *ngFor="let m of messages">
+                    {{m}}
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+
+    <div class="col-6">
+        <div echarts [options]="chartOption"></div>
+        <!-- <echarts [chartData]="chartData"></echarts> -->
+    </div>
+</div>

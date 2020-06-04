@@ -1,0 +1,55 @@
+<div class="leadspace-landing"></div>
+<div class="container-landing">
+    <ngb-tabset justify="justified">
+        <div *ngIf="authService.isRole('ADMIN')">
+            <ngb-tab title="Import Data">
+                <ng-template ngbTabContent>
+                    <stock-price></stock-price>
+                </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Manage Company">
+                <ng-template ngbTabContent>
+                    <company></company>
+                </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Manage Stock Exchange">
+                <ng-template ngbTabContent>
+                    <stock-exchange></stock-exchange>
+                </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Manage Sector">
+                <ng-template ngbTabContent>
+                    <sector></sector>
+                </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Update IPO Details">
+                <ng-template ngbTabContent>
+                    <ipo></ipo>
+                </ng-template>
+            </ngb-tab>
+        </div>
+
+        <div *ngIf="authService.isRole('USER')">
+            <ngb-tab title="IPOs" class="tab-title">
+                <ng-template ngbTabContent>
+                    <ipo-future></ipo-future>
+                </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Compare Company">
+                <ng-template ngbTabContent>
+                    <compare-company></compare-company>
+                </ng-template>
+            </ngb-tab>
+
+            <!-- <ngb-tab title="Compare Sectors">
+                <ng-template ngbTabContent>
+                </ng-template>
+            </ngb-tab> -->
+        </div>
+    </ngb-tabset>
+</div>

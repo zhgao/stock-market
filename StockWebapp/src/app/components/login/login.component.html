@@ -1,0 +1,52 @@
+<div class="container-login">
+    <form class="form-login" [formGroup]="loginForm" (ngSubmit)="login()">
+        <img class="mb-3" src="../../../assets/img/stock_icon.png" alt="" width="72" height="72">
+        <h4 class="mb-3">Please sign in</h4>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-user fa-fw"></i></span>
+            </div>
+            <label for="username" class="sr-only">Username</label>
+            <input id="username" autocomplete type="text" class="form-control" placeholder="Username"
+                formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required.</div>
+                <div *ngIf="f.username.errors.email">Username must be a valid email address.</div>
+            </div>
+        </div>
+
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock fa-fw"></i> </span>
+            </div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" autocomplete type="password" class="form-control" placeholder="Password"
+                formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required.</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+<!-- 
+        <div class="form-row">
+            <div class="col-md-6 text-align-left mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="remember-me">
+                    <label class="form-check-label" for="remember-me">
+                        Remeber Me
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 text-align-right">
+                <span>Forgot password?</span>
+            </div>
+        </div> 
+ -->
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+        </div>
+
+        <span>Don't have an account? Click <a routerLink="/signup">here</a>!</span>
+    </form>
+</div>

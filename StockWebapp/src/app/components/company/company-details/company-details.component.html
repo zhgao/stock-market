@@ -1,0 +1,76 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Company Profile</h4>
+</div>
+<form [formGroup]="companyForm" (ngSubmit)="save()">
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <div class="input-group">
+                <input id="companyName" autocomplete class="form-control" placeholder="Please enter the company name"
+                    formControlName="companyName" [ngClass]="{ 'is-invalid': submitted && f.companyName.errors }">
+                <div *ngIf="submitted && f.companyName.errors" class="invalid-feedback">
+                    <div *ngIf="f.companyName.errors.required">Company Name is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ceo">CEO</label>
+            <div class="input-group">
+                <input id="ceo" autocomplete class="form-control" placeholder="Please enter the CEO Name"
+                    formControlName="ceo" [ngClass]="{ 'is-invalid': submitted && f.ceo.errors }">
+                <div *ngIf="submitted && f.ceo.errors" class="invalid-feedback">
+                    <div *ngIf="f.ceo.errors.required">CEO Name is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="directors">Directors</label>
+            <div class="input-group">
+                <input id="directors" autocomplete class="form-control" placeholder="Please enter the director names"
+                    formControlName="directors">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="turnover">Turnover</label>
+            <div class="input-group">
+                <input id="turnover" autocomplete class="form-control" placeholder="Please enter the turnover"
+                    formControlName="turnover" [ngClass]="{ 'is-invalid': submitted && f.turnover.errors }">
+                <div *ngIf="submitted && f.turnover.errors" class="invalid-feedback">
+                    <div *ngIf="f.turnover.errors.required">Turnover is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sectorId">Sector</label>
+            <div class="input-group">
+                <select class="form-control" formControlName="sectorId"
+                    [ngClass]="{ 'is-invalid': submitted && f.sectorId.errors }">
+                    <option *ngFor="let s of sectorOptions" [ngValue]="s.id">
+                        {{s.name}}
+                    </option>
+                </select>
+                <div *ngIf="submitted && f.sectorId.errors" class="invalid-feedback">
+                    <div *ngIf="f.sectorId.errors.required">Sector is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="brief">Brief</label>
+            <div class="input-group">
+                <textarea id="brief" autocomplete class="form-control" placeholder="Please enter the brief"
+                    formControlName="brief" [ngClass]="{ 'is-invalid': submitted && f.brief.errors }"></textarea>
+                <div *ngIf="submitted && f.brief.errors" class="invalid-feedback">
+                    <div *ngIf="f.brief.errors.required">Brief is required.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-primary">Save</button>
+    </div>
+</form>

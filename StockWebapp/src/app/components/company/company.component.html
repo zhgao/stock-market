@@ -1,0 +1,38 @@
+<div class="mt-3 mb-3">
+    <button class="btn btn-primary" (click)="open(null)"><i class="fa fa-edit fa-fw"></i>Add</button>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Company Name</th>
+            <th scope="col">CEO</th>
+            <th scope="col">Turnover</th>
+            <th scope="col">Brief</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of companies">
+            <td>{{c.companyName}}</td>
+            <td>{{c.ceo}}</td>
+            <td>${{c.turnover}}</td>
+            <td>{{c.brief}}</td>
+            <td>
+                <button class="btn btn-outline-primary mr-2" (click)="open(c)"><i class="fa fa-edit fa-fw"></i>Edit</button>
+                <button *ngIf="!c.active" class="btn btn-outline-primary" (click)="activate(c)"><i class="fa fa-edit fa-fw"></i>Activate</button>
+                <button *ngIf="c.active" class="btn btn-outline-primary" (click)="deactivate(c)"><i class="fa fa-edit fa-fw"></i>Deactivate</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="getList()">
+    </ngb-pagination>
+
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="getList()">
+        <option [ngValue]="10">10 items per page</option>
+        <option [ngValue]="20">20 items per page</option>
+        <option [ngValue]="40">40 items per page</option>
+    </select>
+</div>

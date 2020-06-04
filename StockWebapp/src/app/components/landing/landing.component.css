@@ -1,0 +1,13 @@
+.container-landing {
+    padding-left: 10em;
+    padding-right: 10em;
+}
+.leadspace-landing {
+    background-image: url("../../../assets/img/charting_the_markets_logo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+.tab-title {
+    color: red;
+}

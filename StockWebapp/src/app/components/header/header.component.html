@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <span class="navbar-brand mb-0 h1">
+        <a class="navbar-brand" routerLink="/index">
+            <img src="../assets/img/stock_icon.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
+            Stock Market Charting
+        </a>
+    </span>
+
+    <div *ngIf="authService.isLoggedIn()" class="navbar-nav ml-auto btn-group" ngbDropdown display="dynamic">
+        <button class="btn btn-outline-primary"><i class="fa fa-user fa-lg"></i> {{authService.getUsername()}}</button>
+        <button class="btn btn-outline-primary dropdown-toggle-split" ngbDropdownToggle></button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+            <!-- <button ngbDropdownItem routerLink="/profile">Update profile</button>
+            <button ngbDropdownItem>Change password</button>
+            <button ngbDropdownItem disabled>------------</button>
+            <button ngbDropdownItem (click)="logout()">Logout!</button> -->
+
+            <div *ngIf="authService.isRole('USER')">
+                <button ngbDropdownItem (click)="openUserProfile()">Update Profile</button>
+                <button ngbDropdownItem (click)="openPasswordChange()">Change password</button>
+                <div class="dropdown-divider"></div>
+            </div>
+            <button ngbDropdownItem (click)="logout()">Logout</button>
+        </div>
+    </div>
+
+</nav>

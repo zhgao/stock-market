@@ -1,0 +1,8 @@
+{
+    "/api/*": "/$1",
+    "/user-service/api/v1/*": "/$1",
+    "/company-service/api/v1/ipos/future*": "/ipos",
+    "/stock-price-service/api/v1/stock-prices?page*": "/stock-price",
+    "/company-service/api/v1/ipos?page*": "/ipos",
+    "/stock-price-service/api/v1/stock-prices/charts": "/stock-price-charts"
+}

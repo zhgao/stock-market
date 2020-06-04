@@ -4,21 +4,23 @@ import { ResponseResult } from '../models/ResponseResult';
 import { of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class ApiService {
-  private baseUrl = 'http://localhost:8080';
 
+export class ApiService {
+
+  private baseUrl = 'http://localhost:8080';
+ 
   //private baseUrl = '/api/v1';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   get(url: string) {
     return this.http.get(this.composeUrl(url));
   }
 
   download(url: string) {
-    return this.http.get(this.composeUrl(url), { responseType: 'blob' });
+    return this.http.get(this.composeUrl(url), {responseType: 'blob'});
   }
 
   post(url: string, body: any) {

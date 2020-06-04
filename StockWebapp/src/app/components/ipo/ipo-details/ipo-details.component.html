@@ -1,0 +1,100 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">IPO Details</h4>
+</div>
+<form [formGroup]="ipoForm" (ngSubmit)="save()">
+    <div class="modal-body">
+
+        <div class="form-group">
+            <label for="companyId">Company</label>
+            <div class="input-group">
+                <select class="form-control" formControlName="companyId"
+                    [ngClass]="{ 'is-invalid': submitted && f.companyId.errors }">
+                    <option *ngFor="let c of companyOptions" [ngValue]="c.id">
+                        {{c.name}}
+                    </option>
+                </select>
+                <div *ngIf="submitted && f.companyId.errors" class="invalid-feedback">
+                    <div *ngIf="f.companyId.errors.required">Company is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="companyCode">Company Code</label>
+            <div class="input-group">
+                <input id="companyCode" autocomplete class="form-control"
+                    placeholder="Please enter the company code" formControlName="companyCode"
+                    [ngClass]="{ 'is-invalid': submitted && f.companyCode.errors }">
+                <div *ngIf="submitted && f.companyCode.errors" class="invalid-feedback">
+                    <div *ngIf="f.companyCode.errors.required">Company Code is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="stockExchangeId">Stock Exchange</label>
+            <div class="input-group">
+                <select class="form-control" formControlName="stockExchangeId"
+                    [ngClass]="{ 'is-invalid': submitted && f.stockExchangeId.errors }">
+                    <option *ngFor="let se of stockExchangeOptions" [ngValue]="se.id">
+                        {{se.name}}
+                    </option>
+                </select>
+                <div *ngIf="submitted && f.stockExchangeId.errors" class="invalid-feedback">
+                    <div *ngIf="f.stockExchangeId.errors.required">Stock Exchange is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="pricePerShare">Price Per Share</label>
+            <div class="input-group">
+                <input id="pricePerShare" autocomplete class="form-control"
+                    placeholder="Please enter the price per share" formControlName="pricePerShare"
+                    [ngClass]="{ 'is-invalid': submitted && f.pricePerShare.errors }">
+                <div *ngIf="submitted && f.pricePerShare.errors" class="invalid-feedback">
+                    <div *ngIf="f.pricePerShare.errors.required">Price Per Share is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="totalShare">Total Share</label>
+            <div class="input-group">
+                <input id="totalShare" autocomplete class="form-control" placeholder="Please enter the total share"
+                    formControlName="totalShare" [ngClass]="{ 'is-invalid': submitted && f.totalShare.errors }">
+                <div *ngIf="submitted && f.totalShare.errors" class="invalid-feedback">
+                    <div *ngIf="f.totalShare.errors.required">Total Share is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="openDatetime">Open Date</label>
+            <div class="input-group">
+                <input id="openDatetime" type="text" ngbDatepicker #d="ngbDatepicker" class="form-control"
+                    placeholder="yyyy-mm-dd" formControlName="openDatetime"
+                    [ngClass]="{ 'is-invalid': submitted && f.openDatetime.errors }">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"><i
+                            class="fa fa-calendar fa-fw"></i></button>
+                </div>
+                <div *ngIf="submitted && f.openDatetime.errors" class="invalid-feedback">
+                    <div *ngIf="f.openDatetime.errors.required">Open Date is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="remarks">Remarks</label>
+            <div class="input-group">
+                <textarea id="remarks" class="form-control" rows="3" placeholder="Please enter the remarks"
+                    formControlName="remarks"></textarea>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-primary">Save</button>
+    </div>
+</form>

@@ -1,0 +1,52 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Stock Exchange</h4>
+</div>
+<form [formGroup]="seForm" (ngSubmit)="save()">
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="stockExchange">Stock Exchange Name</label>
+            <div class="input-group">
+                <input id="stockExchange" autocomplete class="form-control"
+                    placeholder="Please enter the stock exchange name" formControlName="stockExchange"
+                    [ngClass]="{ 'is-invalid': submitted && f.stockExchange.errors }">
+                <div *ngIf="submitted && f.stockExchange.errors" class="invalid-feedback">
+                    <div *ngIf="f.stockExchange.errors.required">Stock Change Name is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="brief">Brief</label>
+            <div class="input-group">
+                <input id="brief" autocomplete class="form-control" placeholder="Please enter the brief"
+                    formControlName="brief" [ngClass]="{ 'is-invalid': submitted && f.brief.errors }">
+                <div *ngIf="submitted && f.brief.errors" class="invalid-feedback">
+                    <div *ngIf="f.brief.errors.required">Brief is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contactAddress">Contact Address</label>
+            <div class="input-group">
+                <input id="contactAddress" autocomplete class="form-control"
+                    placeholder="Please enter the contact address" formControlName="contactAddress"
+                    [ngClass]="{ 'is-invalid': submitted && f.contactAddress.errors }">
+                <div *ngIf="submitted && f.contactAddress.errors" class="invalid-feedback">
+                    <div *ngIf="f.contactAddress.errors.required">Contact Address is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="remarks">Remarks</label>
+            <div class="input-group">
+                <textarea id="remarks" class="form-control" rows="3" placeholder="Please enter the remarks"
+                    formControlName="remarks"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-primary">Save</button>
+    </div>
+</form>

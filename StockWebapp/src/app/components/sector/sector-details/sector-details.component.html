@@ -1,0 +1,33 @@
+<div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Sector</h4>
+    </div>
+    <form [formGroup]="sectorForm" (ngSubmit)="save()">
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="name">Sector Name</label>
+                <div class="input-group">
+                    <input id="name" autocomplete class="form-control"
+                        placeholder="Please enter the sector name" formControlName="name"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Sector Name is required.</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="brief">Brief</label>
+                <div class="input-group">
+                    <input id="brief" autocomplete class="form-control" placeholder="Please enter the brief"
+                        formControlName="brief" [ngClass]="{ 'is-invalid': submitted && f.brief.errors }">
+                    <div *ngIf="submitted && f.brief.errors" class="invalid-feedback">
+                        <div *ngIf="f.brief.errors.required">Brief is required.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-primary">Save</button>
+        </div>
+    </form>
