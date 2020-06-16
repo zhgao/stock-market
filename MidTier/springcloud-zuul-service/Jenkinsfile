@@ -1,0 +1,27 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('pull code') {
+         steps {
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class:'CheckoutOption',timeout:600],[$class:'CloneOption',depth:0,noTags:false,reference:'',shallow:false,timeout:600]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '81dc829e-68ee-4831-aa84-60a3dd91d02b', url: 'git@github.com:zhgao/stock-market.git']]])
+         }
+      }
+     stage('Build') {
+           //env.JAVA_HOME="${tool 'jdk1.8.0_231'}"
+           withMaven(
+            maven: 'maven',
+            mavenLocalRepo: '.repository') {
+                sh "mvn clean install -Dmaven.test.skip=true"
+        }
+   }
+   stage('deploy') {
+    sshagent(credentials: ['deploy_ssh_key']) {
+        sh 'ssh root@120.xx.95.105'
+        sh 'docker run -d -p 8080:8080 -v /home/data:/webapps --name search tomcat:9.0'
+        sh 'echo hello'
+        //sh 'scp producer/target/salesApp-1.0-RELEASES.jar  root@120.xx.95.105:/root/deploy/'
+     }
+   }
+   }
+}
