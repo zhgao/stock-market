@@ -23,7 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "echarts": "^4.5.0",
     "mockjs": "^1.1.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "ngx-echarts": "^4.2.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
